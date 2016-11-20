@@ -1,0 +1,10 @@
+<ion-content style="margin-top: 50px;"><ion-refresher pulling-text=下拉刷新 on-refresh=doRefresh()></ion-refresher><article class=weui-article ng-if=dt><h1>{{detail.title}}</h1><section><h2 class=title>来源 :{{detail.source}}</h2><span style="font-size: 10px;color:#888888">{{detail.channelName}}</span><section><p ng-if=detail.imageurls[0].url><img ng-src={{n.url}} ng-repeat="n in detail.imageurls"></p><p>{{detail.desc}}</p><a href={{detail.link}}>查看原文</a></section></section></article></ion-content><div class=loading ng-hide=dt><img src=images/loading.gif></div><style>
+	.loading {
+		position: fixed;
+		z-index: 20;
+		top: 50%;
+		left: 50%;
+		margin-left: -25px;
+		margin-top: -27px;
+	}
+</style>
